@@ -1,7 +1,9 @@
 @media screen and (min-width: 480px) {
   .container {
-    max-width: 480px;
+    max-width: 426px;
   }
+
+  /* ---------------SECTION TEAM -----------2 */
 
   .team {
     padding-top: 96px;
@@ -20,20 +22,24 @@
     margin-bottom: 0;
   }
 
+  /* ------SECTION CUSTOMERS--------- */
+
   .section.customers {
     padding-top: 96px;
   }
+
+  /* -----------PORTFOLIO------------- */
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    max-width: 766px;
   }
 
-  /* Header */
-  /* Hero */
+  /* -----------HEADER------------- */
+  /* -------------SECTION HERO------------ */
 
-  /* section 1 */
+  /* ------------SECTION SPECIFICS --------1 */
   .specifics-list {
     display: flex;
     flex-wrap: wrap;
@@ -50,6 +56,8 @@
     text-align: inherit;
   }
 
+  /* ---------------SECTION TEAM -----------2 */
+
   .team .container {
     max-width: 582px;
   }
@@ -65,6 +73,7 @@
     margin-bottom: 0;
   }
 
+  /*---------- FOOTER ------- */
   .footer {
     padding-left: 93px;
     padding-right: 149px;
@@ -87,20 +96,137 @@
     width: 453px;
     flex-direction: row;
   }
+
+  /* -----------PORTFOLIO------------- */
+  .portfolio {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+
+  .filter-list {
+    justify-content: center;
+    padding-bottom: 64px;
+  }
+
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+
+    margin-inline: auto;
+  }
+
+  .card-list .item {
+    width: 356px;
+    margin-left: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
-  }
-  /* Header */
-  /* Hero */
-
   .section {
     padding-top: 120px;
     padding-bottom: 120px;
   }
-}
 
-@media screen and (max-width: 1199px) {
+  .container {
+    max-width: 1158px;
+  }
+  /* ----------HEADER--------- */
+  /*---------------SECTION HERO----------- */
+
+  /* ------------SECTION SPECIFICS------------- */
+
+  .specifics-list {
+    flex-wrap: nowrap;
+  }
+
+  .specifics-list .item {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+
+  .specifics-icon {
+    display: flex;
+  }
+
+  .specifics-list .paragraph {
+    font-weight: inherit;
+  }
+
+  .title-specifics {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  /* ---------SECTION EMPLOYMENT----------- */
+  .section.employment {
+    display: block;
+  }
+
+  .employment-list .item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  /* ---------SECTION TEAM---------------*/
+  .team .container {
+    max-width: 1158px;
+  }
+  .team-list {
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  .team-list .item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  /* ------SECTION CUSTOMERS--------- */
+  .section.customers {
+    padding-top: 130px;
+  }
+
+  .customers-icon {
+    flex-wrap: nowrap;
+    column-gap: 24px;
+  }
+
+  /* ---------FOOTER---------- */
+
+  .footer {
+    padding: 100px 0;
+  }
+
+  .footer-container {
+    gap: 0;
+  }
+
+  .text-container {
+    margin-right: 120px;
+  }
+
+  .social-container {
+    margin-right: auto;
+  }
+
+  .footer-form {
+    gap: 24px;
+  }
+
+  .footer-form input {
+    width: 264px;
+  }
+
+  /* -----------PORTFOLIO------------- */
+  .portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+  }
+
+  .card-list .item {
+    width: 360px;
+  }
+
+  .filter-list {
+    padding-bottom: 72px;
+  }
 }
