@@ -41,70 +41,79 @@
           </li>
         </ul>
       </address>
-      <button class="menu-open" type="button">
+      <button class="menu-open" .js-open-menu type="button">
         <svg class="icon" width="32" height="22">
           <use href="./images/sprite-no-optimiz.svg#icon-menu-open"></use>
         </svg>
       </button>
     </div>
     <!-- --------MOB MENU FOR MOBILE-VERS------------ -->
-    <div class="mob-menu">
-      <div class="container-menu">
-        <button class="menu-close" type="button">
-          <svg class="icon" width="8" height="8">
-            <use href="./images/sprite-no-optimiz.svg#icon-closeModal"></use>
-          </svg>
-        </button>
+    <div class="mob-menu is-hidden" .js-menu-container>
+      <div class="container">
+        <div class="menu-thumb">
+          <button class="menu-close" .js-close-menu type="button">
+            <svg class="icon" width="8" height="8">
+              <use href="./images/sprite-no-optimiz.svg#icon-closeModal"></use>
+            </svg>
+          </button>
 
-        <ul class="menu-site-nav">
-          <li class="item"><a class="" href="./index.html">Studio</a></li>
-          <li class="item">
-            <a class="" href="./portfolio.html">Portfolio</a>
-          </li>
-          <li class="item"><a class="" href="">Contacts</a></li>
-        </ul>
+          <ul class="menu-site-nav">
+            <li class="menu-item"><a class="menu-link" href="./index.html">Studio</a></li>
+            <li class="menu-item">
+              <a class="menu-link" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="menu-item"><a class="menu-link" href="">Contacts</a></li>
+          </ul>
+        </div>
+        <div class="menu-thumb">
+          <ul class="menu-address-nav">
+            <li class="menu-item">
+              <a class="menu-tel-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-mail-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+          </ul>
 
-        <ul class="menu-address-nav">
-          <li class="item">
-            <a class="menu-address-tel-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
-          </li>
-          <li class="item">
-            <a class="menu-address-mail-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-          </li>
 
-        </ul>
 
-        <ul class="menu-soc-link">
-          <li class="item">
-            <a class="link-icon" href="">
-              <svg class="icon" width="24" height="24">
-                <use href="./images/sprite-no-optimiz.svg#icon-instagram"></use>
+          <ul class="menu-social">
+            <li class="menu-item">
+              <a class="menu-soc-link" href="">
+                <svg class="menu-icon" width="24" height="24">
+                  <use href="./images/sprite-no-optimiz.svg#icon-instagram"></use>
+                </svg>
+              </a>
               </svg>
-            </a>
-          </li>
-          <li class="item">
-            <a href="" class="link-icon">
-              <svg class="icon" width="24" height="24">
-                <use href="./images/sprite-no-optimiz.svg#icon-twitter"></use>
+            </li>
+            <li class="menu-item">
+              <a class="menu-soc-link" href="">
+                <svg class="menu-icon" width="24" height="24">
+                  <use href="./images/sprite-no-optimiz.svg#icon-twitter"></use>
+                </svg>
+              </a>
               </svg>
-            </a>
-          </li>
-          <li class="item">
-            <a href="" class="link-icon">
-              <svg class="icon" width="24" height="24">
-                <use href="./images/sprite-no-optimiz.svg#icon-facebook"></use>
+            </li>
+            <li class="menu-item">
+              <a class="menu-soc-link" href="">
+                <svg class="menu-icon" width="24" height="24">
+                  <use href="./images/sprite-no-optimiz.svg#icon-facebook"></use>
+                </svg>
+              </a>
               </svg>
-            </a>
-          </li>
-          <li class="item">
-            <a href="" class="link-icon">
-              <svg class="icon" width="24" height="24">
-                <use href="./images/sprite-no-optimiz.svg#icon-linkedin"></use>
+            </li>
+            <li class="menu-item">
+              <a class="menu-soc-link" href="">
+                <svg class="menu-icon" width="24" height="24">
+                  <use href="./images/sprite-no-optimiz.svg#icon-linkedin"></use>
+                </svg>
+              </a>
               </svg>
-            </a>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
+    </div>
     </div>
   </header>
 
@@ -524,6 +533,69 @@
   </div>
 
   <script src="./js/modal.js"></script>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>
+
+<!-- <div class="mob-menu">
+  <div class="container-menu">
+    <button class="menu-close" type="button">
+      <svg class="icon" width="8" height="8">
+        <use href="./images/sprite-no-optimiz.svg#icon-closeModal"></use>
+      </svg>
+    </button>
+
+    <div class="menu-nav">
+      <ul class="menu-site-nav">
+        <li class="item"><a class="" href="./index.html">Studio</a></li>
+        <li class="item">
+          <a class="" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li class="item"><a class="" href="">Contacts</a></li>
+      </ul>
+    </div>
+
+    <div class="menu-address">
+      <ul class="menu-address-nav">
+        <li class="item-tel">
+          <a class="menu-address-tel-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+        </li>
+        <li class="item-mail">
+          <a class="menu-address-mail-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="menu-soc-link">
+      <li class="item">
+        <a class="link-icon" href="">
+          <svg class="icon" width="24" height="24">
+            <use href="./images/sprite-no-optimiz.svg#icon-instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="item">
+        <a href="" class="link-icon">
+          <svg class="icon" width="24" height="24">
+            <use href="./images/sprite-no-optimiz.svg#icon-twitter"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="item">
+        <a href="" class="link-icon">
+          <svg class="icon" width="24" height="24">
+            <use href="./images/sprite-no-optimiz.svg#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="item">
+        <a href="" class="link-icon">
+          <svg class="icon" width="24" height="24">
+            <use href="./images/sprite-no-optimiz.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div> -->
