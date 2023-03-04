@@ -64,7 +64,7 @@ p {
   margin: 0;
 }
 
-.no-scroll{
+.no-scroll {
   overflow: hidden;
 }
 
@@ -1499,5 +1499,9 @@ p {
 @media screen and (max-width: 479px) {
   .modal-overlay .modal {
     width: 85%;
+  }
+
+  .team-icon .item {
+    margin-bottom: 0;
   }
 }
