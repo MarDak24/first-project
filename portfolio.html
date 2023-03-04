@@ -17,8 +17,8 @@
 </head>
 
 <body>
-  <!-- <header>
-    <div class="container page-header">
+  <header>
+    <div class="page-header">
       <a href="./index.html" class="header-link"><span class="page">Web</span>Studio</a>
       <nav class="main-nav">
         <ul class="site-nav">
@@ -32,7 +32,7 @@
 
       <address class="address">
         <ul class="address-nav">
-          <li class="item">
+          <li class="item mail-link">
             <a class="address-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
           </li>
           <li class="item">
@@ -40,8 +40,81 @@
           </li>
         </ul>
       </address>
+      <button class="menu-open js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="icon" width="32" height="22">
+          <use href="./images/sprite-no-optimiz.svg#icon-menu-open"></use>
+        </svg>
+      </button>
     </div>
-  </header> -->
+    <!-- --------MOB MENU FOR MOBILE-VERS----------- -->
+    <div class="mob-menu js-menu-container">
+      <div class="container">
+        <div class="menu-thumb">
+          <button class="menu-close js-close-menu" type="button">
+            <svg class="icon" width="8" height="8">
+              <use href="./images/sprite-no-optimiz.svg#icon-closeModal"></use>
+            </svg>
+          </button>
+
+          <ul class="menu-site-nav">
+            <li class="menu-item"><a class="menu-link" href="./index.html">Studio</a></li>
+            <li class="menu-item">
+              <a class="menu-link current" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="menu-item"><a class="menu-link" href="">Contacts</a></li>
+          </ul>
+        </div>
+        <div class="menu-thumb">
+          <ul class="menu-address-nav">
+            <li class="menu-item">
+              <a class="menu-tel-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-mail-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+          </ul>
+
+
+
+          <ul class="menu-social">
+            <li class="menu-item">
+              <a class="menu-soc-link" href="">
+                <svg class="menu-icon" width="24" height="24">
+                  <use href="./images/sprite-no-optimiz.svg#icon-instagram"></use>
+                </svg>
+              </a>
+              </svg>
+            </li>
+            <li class="menu-item">
+              <a class="menu-soc-link" href="">
+                <svg class="menu-icon" width="24" height="24">
+                  <use href="./images/sprite-no-optimiz.svg#icon-twitter"></use>
+                </svg>
+              </a>
+              </svg>
+            </li>
+            <li class="menu-item">
+              <a class="menu-soc-link" href="">
+                <svg class="menu-icon" width="24" height="24">
+                  <use href="./images/sprite-no-optimiz.svg#icon-facebook"></use>
+                </svg>
+              </a>
+              </svg>
+            </li>
+            <li class="menu-item">
+              <a class="menu-soc-link" href="">
+                <svg class="menu-icon" width="24" height="24">
+                  <use href="./images/sprite-no-optimiz.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
 
   <main>
     <section class="portfolio">
@@ -266,6 +339,8 @@
 
     </div>
   </footer>
+
+  <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
