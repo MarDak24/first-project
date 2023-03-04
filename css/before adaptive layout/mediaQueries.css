@@ -4,6 +4,27 @@
   }
   /* -----------HEADER------------- */
   /* -----------SECTION HERO------------- */
+  .bg-image {
+    background-image: linear-gradient(
+        to right,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/480/hero/hero-480_1x.jpg');
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .bg-image {
+      background-image: linear-gradient(
+          to right,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url('../images/480/hero/hero-480_2x.jpg');
+    }
+  }
 
   /* ---------------SECTION TEAM -----------2 */
 
@@ -31,6 +52,10 @@
   }
 
   /* -----------PORTFOLIO------------- */
+
+  .card-list .item {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -164,7 +189,8 @@
   }
 
   .card-list .item {
-    width: 356px;
+    /* width: 356px; */
+
     margin-left: 0;
   }
 }
@@ -175,7 +201,8 @@
     padding-bottom: 120px;
   }
 
-  .container, .page-header {
+  .container,
+  .page-header {
     max-width: 1158px;
   }
 
