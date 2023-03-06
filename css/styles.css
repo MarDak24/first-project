@@ -88,13 +88,14 @@ p {
 
 .container {
   width: 100%;
-  max-width: 1158px;
+  max-width: 428px;
 
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
+
 .section {
   padding-top: 96px;
   padding-bottom: 96px;
@@ -410,7 +411,7 @@ p {
   flex-wrap: wrap;
   gap: 16px 24px;
 
-  padding-bottom: 48px;
+  margin-bottom: 48px;
 }
 
 .filter-button {
@@ -516,10 +517,19 @@ p {
   margin-bottom: 72px;
 }
 
+.specifics-list .item:last-child {
+  margin-bottom: 0;
+}
+
 .team-list > .item {
+  max-width: 264px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
+}
+
+.team-list .item:last-child {
+  margin-bottom: 0;
 }
 
 .specifics-icon {
@@ -793,6 +803,7 @@ p {
 
   background-color: var(--window-bg-color);
 
+  overflow-y: scroll;
   transition: opacity 250ms var(--transition-function),
     visibility 250ms var(--transition-function);
 }
@@ -982,6 +993,7 @@ p {
 
 .modal-check span {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
 
@@ -1003,9 +1015,11 @@ p {
 /* -----------MOB MENU-------------- */
 
 .menu-open {
+  margin-left: auto;
+  padding: 0;
+
   stroke: var(--main-color);
   background-color: transparent;
-  margin-left: auto;
 }
 
 .mob-menu {
@@ -1033,6 +1047,7 @@ p {
 
   height: 100%;
 }
+
 .menu-close {
   display: flex;
   justify-content: center;
@@ -1054,8 +1069,8 @@ p {
     background-color 250ms var(--transition-function);
 }
 
-.menu-site-nav {
-  margin-bottom: 50px;
+.menu-thumb {
+  padding-bottom: 50px;
 }
 
 .menu-site-nav .menu-item:not(:last-child) {
@@ -1075,9 +1090,16 @@ p {
   color: var(--hover-button-portfolio-background);
 }
 
+.menu-address-nav {
+  margin-bottom: 48px;
+}
+
+.menu-address-nav .menu-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
 .menu-tel-link {
   display: block;
-  margin-bottom: 40px;
 
   font-weight: 700;
   font-size: 36px;
@@ -1089,7 +1111,6 @@ p {
 
 .menu-mail-link {
   display: block;
-  margin-bottom: 48px;
 
   font-weight: 500;
   font-size: 20px;
@@ -1103,15 +1124,12 @@ p {
 
 .menu-social {
   display: flex;
+  justify-content: space-between;
 }
 
 .menu-social .menu-item {
   width: 40px;
   height: 40px;
-}
-
-.menu-social .menu-item:not(:last-child) {
-  margin-right: 56px;
 }
 
 .menu-soc-link {
@@ -1144,18 +1162,16 @@ p {
 /*--------------------- ADAPTIVE------------------ */
 
 @media screen and (min-width: 480px) {
-  .container {
-    max-width: 426px;
-  }
   /* -----------HEADER------------- */
   /* -----------SECTION HERO------------- */
+
   .bg-image {
     background-image: linear-gradient(
         to right,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('../images/480/hero/hero-480_1x.jpg');
+      url('../images/768/hero/hero-768_1x.jpg');
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -1167,7 +1183,7 @@ p {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url('../images/480/hero/hero-480_2x.jpg');
+        url('../images/768/hero/hero-768_2x.jpg');
     }
   }
 
@@ -1223,13 +1239,14 @@ p {
   }
 
   /* -------------SECTION HERO------------ */
+
   .bg-image {
     background-image: linear-gradient(
         to right,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('../images/768/hero/hero-768_1x.jpg');
+      url('../images/people-office.jpg');
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -1241,7 +1258,7 @@ p {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url('../images/768/hero/hero-768_2x.jpg');
+        url('../images/1200/hero/people-office-1200_2x.jpg');
     }
   }
 
@@ -1286,11 +1303,16 @@ p {
     margin-bottom: 0;
   }
 
-  /*---------- FOOTER ------- */
-  .footer {
-    padding-left: 93px;
-    padding-right: 149px;
+  /* ------SECTION CUSTOMERS--------- */
+  .customers > .container {
+    max-width: 582px;
   }
+
+  .customers-icon .item {
+    width: 168px;
+  }
+
+  /*---------- FOOTER ------- */
 
   .footer-container {
     display: flex;
@@ -1318,7 +1340,7 @@ p {
 
   .filter-list {
     justify-content: center;
-    padding-bottom: 64px;
+    margin-bottom: 64px;
   }
 
   .portfolio .card-list {
@@ -1358,28 +1380,6 @@ p {
   }
 
   /*---------------SECTION HERO----------- */
-
-  .bg-image {
-    background-image: linear-gradient(
-        to right,
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url('../images/people-office.jpg');
-  }
-
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .bg-image {
-      background-image: linear-gradient(
-          to right,
-          rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)
-        ),
-        url('../images/1200/hero/people-office-1200_2x.jpg');
-    }
-  }
 
   .hero-title {
     width: 496px;
@@ -1432,6 +1432,10 @@ p {
   }
 
   /* ------SECTION CUSTOMERS--------- */
+  .customers > .container {
+    max-width: 1158px;
+  }
+
   .section.customers {
     padding-top: 130px;
   }
@@ -1479,7 +1483,23 @@ p {
   }
 
   .filter-list {
-    padding-bottom: 72px;
+    margin-bottom: 72px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .address-link {
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+  }
+
+  .mail-link {
+    margin-bottom: 6px;
+  }
+
+  .footer-container {
+    max-width: 582px;
   }
 }
 
@@ -1494,6 +1514,14 @@ p {
     padding-left: 16px;
     padding-right: 16px;
   }
+
+  .form-subscribe {
+    text-align: center;
+  }
+
+  .filter-button {
+    padding: 8px 16px;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -1501,7 +1529,35 @@ p {
     width: 85%;
   }
 
+  .team-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .team-icon .item {
     margin-bottom: 0;
+  }
+
+  .bg-image {
+    background-image: linear-gradient(
+        to right,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/480/hero/hero-480_1x.jpg');
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .bg-image {
+      background-image: linear-gradient(
+          to right,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url('../images/480/hero/hero-480_2x.jpg');
+    }
   }
 }
