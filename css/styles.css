@@ -1069,7 +1069,7 @@ p {
     background-color 250ms var(--transition-function);
 }
 
-.menu-thumb {
+.menu-thumb:not(:last-child) {
   padding-bottom: 50px;
 }
 
@@ -1125,6 +1125,7 @@ p {
 .menu-social {
   display: flex;
   justify-content: space-between;
+  max-width: 328px;
 }
 
 .menu-social .menu-item {
@@ -1488,6 +1489,11 @@ p {
 }
 
 @media screen and (max-width: 1199px) {
+  .modal-overlay .modal {
+    top: 0;
+    transform: translate(-50%, 0) scale(100%);
+  }
+
   .address-link {
     font-size: 14px;
     line-height: 1.17;
@@ -1504,6 +1510,16 @@ p {
 }
 
 @media screen and (max-width: 767px) {
+  .bg-image {
+    min-height: 432px;
+    padding-bottom: 112px;
+    padding-top: 112px;
+  }
+
+  .hero-title {
+    margin-bottom: 72px;
+  }
+
   .page-header .main-nav,
   .page-header .address {
     display: none;
@@ -1559,5 +1575,11 @@ p {
         ),
         url('../images/480/hero/hero-480_2x.jpg');
     }
+  }
+}
+
+@media screen and (max-width: 384px) {
+  .menu-tel-link {
+    font-size: 29px;
   }
 }
