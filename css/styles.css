@@ -1539,6 +1539,10 @@ p {
     padding: 8px 16px;
   }
 
+  .footer-form {
+    align-items: center;
+  }
+
   .footer-form input {
     max-width: 398px;
   }
